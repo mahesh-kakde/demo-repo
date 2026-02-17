@@ -1,0 +1,41 @@
+CLONE: get a copy of code on your local hardware to edit
+git clone <repo_link>
+example: https://github.com/mahesh-kakde/student-management-system.git
+
+TRACKING: keeping track of all changes happening to the code
+1. git status # get a status of if any unsaved changes/new files created.
+2. git add . # tracks all files, the new ones created too, need to be done before committing code to git.
+(or) git add <file name> # tracks the specified file (the new one created)
+
+COMMIT: save changes locally
+git commit -m "header" -m "description"
+
+PUSH: save the changes to GitHub i.e., push to GitHub.
+git push
+
+# IF CREATING A NEW REPO
+1. create a folder, name it per the git repository you wish to create, in terminal, type: git init
+2. git add
+3. git commit -m "header" -m "description"
+4. git remote add origin <git_url>
+example: https://github.com/mahesh-kakde/demo-repo2.git
+5. git push origin master
+
+# BRANCHING
+what/why?: you have the main branch, unless created another, where all the commits are done, when you want to add a new feature to the script, without risking the credability
+of the whole code, you create a branch, where you make those changes, like a sandbox, and when you are sure of the code, you merge it back to the main/master branch.
+1. git branch # to check current branches in the repo
+2. git checkout -b <branch_name> # to create a new branch
+3. git checkout <branch_name> # to switch between branches
+4. git merge <branch_name> # assuming you are in branch A, this will merge A with branch_name
+
+## to push code to that particular branch: git push origin <branch_name>
+## to update the code locally if merge done by GitHub web: git pull # if upstream not set, git pull origin <branch_name>
+
+5. git branch -d <branch_name> # deleting a branch
+
+* git diff <branch_name> # assuming you are in branch A, this will tell the differences in the branch A and branch_name
+
+# UNDOING CHANGES
+1. git reset
+2. git reset HEAD~1
